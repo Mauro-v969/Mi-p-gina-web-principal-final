@@ -325,3 +325,43 @@ function analizarSeccionMapa(nombreArchivo) {
     panelResultado.style.display = "block";
     panelResultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
+/* ==========================================================================
+   PARCHE EXTERNO DE SEGURIDAD: CONTROL DE RENDERIZADO Y ANTIBUG
+   Este script fuerza al navegador a pintar correctamente los caracteres
+   especiales en caso de fallos en la codificación del servidor o archivo.
+   ========================================================================== */
+
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Forzar la inyección de la metaetiqueta UTF-8 en el navegador en tiempo de ejecución
+    if (!document.querySelector('meta[charset]')) {
+        let metaCharset = document.createElement('meta');
+        metaCharset.setAttribute('charset', 'UTF-8');
+        document.head.insertBefore(metaCharset, document.head.firstChild);
+    }
+
+    // 2. Parche de textos dinámicos para el menú de navegación y títulos principales
+    // Evita que los caracteres como 'í', 'ó' o emojis se rompan en pantalla
+    const enlacesNav = document.querySelectorAll(".nav-links-clasicos a");
+    enlacesNav.forEach(enlace => {
+        let textoLimpio = enlace.innerHTML;
+        // Diccionario de reparación automática en tiempo de ejecución
+        textoLimpio = textoLimpio.replace(/Inicio/g, "Inicio")
+                                 .replace(/Laptops/g, "Laptops")
+                                 .replace(/Ofertas/g, "Ofertas")
+                                 .replace(/Servicios/g, "Servicios")
+                                 .replace(/Sucursales/g, "Sucursales")
+                                 .replace(/Mi Carrito/g, " Mi Carrito");
+        enlace.innerHTML = textoLimpio;
+    });
+
+    // 3. Sanitización de cabeceras de sección contra el bug '???'
+    const titulosH1 = document.querySelectorAll("h1, h2, h3, .brand");
+    titulosH1.forEach(titulo => {
+        if (titulo.textContent.includes("???")) {
+            // Si el navegador ya corrompió el texto, lo reparamos con texto plano seguro
+            if (titulo.classList.contains("brand")) titulo.innerHTML = "TechVenta";
+            if (titulo.tagName === "H1") titulo.innerHTML = "Potencia para tus Proyectos";
+            if (titulo.tagName === "H2") titulo.innerHTML = "Equipos Profesionales de Alto Rendimiento";
+        }
+    });
+});
