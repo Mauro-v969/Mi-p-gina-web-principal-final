@@ -3,150 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechVenta S.A. de C.V. | Soluciones Tecnológicas de Vanguardia</title>
-    <!-- Vinculación del diseño único mediante CSS externo de acuerdo al indicador de presentación -->
+    <title>TechVenta | Potencia para tus Proyectos</title>
     <link rel="stylesheet" href="estilos-home.css">
+    
+    <style type="text/css">
+        .contenedor-principal-computadora {
+            width: 100%;
+            max-width: 100%;
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .imagen-central-grande {
+            width: 100%;
+            max-width: 1100px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            display: block;
+        }
+
+        /* Diseño de rejilla para Identidad y Soporte */
+        .seccion-corporativa {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .tarjeta-corporativa {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .tarjeta-corporativa h3 {
+            color: #0056b3;
+            margin-top: 0;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .tarjeta-corporativa p {
+            line-height: 1.6;
+            color: #1e293b;
+            font-size: 0.95rem;
+        }
+
+        .lista-soporte {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .lista-soporte li {
+            margin-bottom: 12px;
+        }
+
+        .lista-soporte a {
+            color: #1e293b;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        .lista-soporte a:hover {
+            color: #0056b3;
+        }
+
+        /* Bloque de Redes Sociales */
+        .bloque-redes {
+            text-align: center;
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .bloque-redes h4 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .iconos-redes {
+            font-size: 1.8rem;
+            letter-spacing: 15px;
+            margin: 15px 0;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- RÚBRICA 2.1.1: Elemento obligatorio <noscript> en el body para control de navegadores sin soporte Script -->
+    <div id="indicador-home"></div>
+
     <noscript>
-        <div style="background-color: #e74c3c; color: white; padding: 20px; text-align: center; font-weight: bold; font-size: 1.2rem;">
-            ⚠️ ATENCIÓN: Este sitio requiere que JavaScript esté activado para calcular cotizaciones interactivas y mostrar el catálogo inteligente de TechVenta.
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold;">
+            ⚠️ ERROR DE ENTORNO: Activa JavaScript para habilitar las funciones interactivas del portal.
         </div>
     </noscript>
 
-    <!-- Encabezado Corporativo Premium -->
     <header class="top-header">
         <div class="logo-container">
             <div class="logo-box">T</div>
-            <div>
-                <span class="brand">TechVenta</span><br>
-                <small style="color: #999; letter-spacing: 1px;">SOLUCIONES TECNOLÓGICAS 2026</small>
+            <div class="logo-text">
+                <span class="brand">TechVenta</span>
+                <small>SOLUCIONES TECNOLÓGICAS 2026</small>
             </div>
         </div>
-        <div class="header-search">
-            <input type="text" placeholder="¿Qué equipo buscas hoy?" style="padding: 10px 20px; border: 1px solid #ccc; border-radius: 20px; width: 300px; outline: none;">
+        
+        <div class="search-container">
+            <input type="text" placeholder="¿Qué equipo buscas hoy?">
         </div>
-        <div>
-            <button class="btn-action" onclick="alert('Conectando con el centro de soluciones...');">Contacto Directo</button>
-        </div>
+
+        <a href="contacto.html" class="btn-contact">Contacto Directo</a>
     </header>
 
-    <!-- Navegación Central CSS Grid/Flexbox -->
-    <nav class="main-nav">
-        <ul class="nav-list">
-            <li><a href="index.html"><strong>INICIO</strong></a></li>
-            <li><a href="laptops.html">LAPTOPS</a></li>
-            <li><a href="desktops.html">DESKTOPS</a></li>
-            <li><a href="ofertas.html" style="color: #ffd700;"><strong>OFERTAS 🔥</strong></a></li>
-            <li><a href="servicios.html">SERVICIOS</a></li>
-            <li><a href="sucursales.html">SUCURSALES</a></li>
-            <li><a href="carrito.html">🛒 MI CARRITO</a></li>
-        </ul>
-    </nav>
+    <ul class="nav-links-clasicos">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="laptops.html" style="background-color: rgba(0, 86, 179, 0.1);">Laptops</a></li>
+        <li><a href="desktops.html">Desktops</a></li>
+        <li><a href="ofertas.html" style="color: #e67e22;">Offers 🔥</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="sucursales.html">Sucursales</a></li>
+        <li><a href="carrito.html">🛒 Mi Carrito</a></li>
+    </ul>
 
-    <!-- Hero Section con llamada a la acción interactiva -->
-    <section class="hero-banner">
-        <div class="hero-card">
-            <h1 style="margin: 0 0 10px 0; font-size: 2.5rem;">POTENCIA PARA TUS PROYECTOS</h1>
-            <h3 style="color: #3498db; margin: 0 0 25px 0; font-weight: 400;">Equipos Profesionales de Alto Rendimiento</h3>
-            
-            <!-- Elemento de interacción directa para la rúbrica -->
-            <button class="btn-action" style="background: #3498db; font-size: 1rem;" onclick="calcularPresupuestoPersonalizado()">
-                🖥️ COTIZAR PRESUPUESTO AL INSTANTE
-            </button>
-
-            <!-- Div contenedor donde el script inyectará dinámicamente los datos -->
-            <div id="resultado-interactivo" style="display: none;"></div>
-        </div>
-    </section>
-
-    <!-- Área de Contenido Principal -->
-    <main class="main-layout">
+    <main class="container">
         
-        <!-- Barra Lateral de Parámetros -->
-        <aside class="sidebar-filters">
-            <h3 style="color: var(--primary); margin-top: 0; border-bottom: 2px solid #edf2f7; padding-bottom: 10px;">FILTRAR EQUIPOS</h3>
-            <form onsubmit="event.preventDefault(); alert('Filtro dinámico en mantenimiento.');">
-                <p><strong>Rango de Precio:</strong></p>
-                <select style="width:100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
-                    <option value="all">Ver todos los precios</option>
-                    <option value="estudiante">Menos de $10,000</option>
-                    <option value="pro">$10,000 - $25,000</option>
-                </select>
+        <section style="text-align: center;">
+            <h1>Potencia para tus Proyectos</h1>
+            <h2>Equipos Profesionales de Alto Rendimiento</h2>
+            
+            <button class="btn-budget" onclick="calcularPresupuestoExpress()">
+                💻 COTIZAR PRESUPUESTO AL INSTANTE
+            </button>
+        </section>
 
-                <p><strong>Rendimiento Destacado:</strong></p>
-                <label><input type="radio" name="perf"> Uso Académico / Oficina</label><br>
-                <label><input type="radio" name="perf"> Desarrollo & Gaming Pro</label>
+        <div class="contenedor-principal-computadora">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop" 
+                 alt="Laptop Corporativa Premium TechVenta" 
+                 class="imagen-central-grande">
+        </div>
 
-                <p><strong>Marcas Homologadas:</strong></p>
-                <label><input type="checkbox" checked> TechPro Premium</label><br>
-                <label><input type="checkbox"> EcoCompute Green</label>
-                
-                <button class="btn-premium" style="margin-top: 20px; background: var(--dark);">Actualizar Filtros</button>
-            </form>
-            <div style="margin-top: 30px; text-align: center;">
-                <a href="blog.html" style="color: var(--primary); font-weight: bold; text-decoration: none;">📄 Visita nuestro Blog</a>
+        <section class="seccion-corporativa">
+            
+            <div class="tarjeta-corporativa">
+                <h3>IDENTIDAD CORPORATIVA</h3>
+                <p><strong>Misión:</strong> Proporcionar soluciones tecnológicas integrales a través de la venta de equipos de cómputo de alta calidad, impulsando el desarrollo educativo y profesional de nuestros clientes.</p>
+                <p style="margin-top: 15px;"><strong>Visión:</strong> Consolidarnos como la plataforma de comercio electrónico líder en el sector tecnológico, reconocida por nuestra excelencia en servicio y vanguardia en productos.</p>
             </div>
+
+            <div class="tarjeta-corporativa">
+                <h3>ATENCIÓN AL CLIENTE</h3>
+                <ul class="lista-soporte">
+                    <li><a href="faq.html">❓ Preguntas Frecuentes (FAQ)</a></li>
+                    <li><a href="privacidad.html">🛡️ Garantías y Privacidad</a></li>
+                    <li><a href="mapa_sitio.html">🗺️ Mapa del Sitio</a></li>
+                    <li style="margin-top: 15px; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+                        <strong style="font-size: 0.85rem; color: #64748b; display: block;">CONTACTO DIRECTO:</strong>
+                        <a href="mailto:ventas@techventa.com.mx" style="color: #0056b3; font-size: 0.95rem;">ventas@techventa.com.mx</a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <aside class="filter-section">
+            <h3>FILTRAR EQUIPOS</h3>
+            
+            <div class="filter-group">
+                <label>Rango de Precio:</label>
+                <select id="control-orden" onchange="ordenarProductosPorPrecio()">
+                    <option value="DEF">Ver todos los precios</option>
+                    <option value="MENOR">Precio: Menor a Mayor</option>
+                    <option value="MAYOR">Precio: Mayor a Menor</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Rendimiento Destacado:</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="uso-oficina" name="rendimiento" value="oficina">
+                    <label for="uso-oficina">Uso Académico / Oficina</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="radio" id="uso-gaming" name="rendimiento" value="gaming">
+                    <label for="uso-gaming">Desarrollo & Gaming Pro</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Marcas Homologadas:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="brand-techpro" checked>
+                    <label for="brand-techpro">TechPro Premium</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="brand-eco">
+                    <label for="brand-eco">EcoCompute Green</label>
+                </div>
+            </div>
+
+            <button class="btn-filter-submit" type="button">Actualizar Filtros</button>
         </aside>
 
-        <!-- Sección de Muestreo de Catálogo -->
-        <section>
-            <h2 style="color: var(--dark); border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 0;">CATÁLOGO DESTACADO</h2>
-            
-            <div class="products-grid">
-                <!-- Tarjeta 1 -->
-                <article class="product-card">
-                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400" alt="Laptop Uni-Student">
-                    <h3>Laptop Uni-Student 14"</h3>
-                    <p style="color: var(--accent); font-size: 1.3rem; font-weight: bold; margin: 10px 0;">$8,499.00</p>
-                    <button class="btn-premium" onclick="alert('Ficha Técnica: Procesador 4 núcleos, 8GB RAM, 256GB SSD. Ideal para tareas del módulo DEWE-20.')">VER FICHA TÉCNICA</button>
-                </article>
+        <div id="contenedor-calculo" style="display: none; background: #ecfdf5; border: 1px solid #10b981; padding: 15px; border-radius: 6px; margin-bottom: 20px;">
+            <p id="salida-presupuesto" style="margin: 0; color: #065f46; font-weight: bold;"></p>
+        </div>
 
-                <!-- Tarjeta 2 -->
-                <article class="product-card">
-                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400" alt="Workstation Pro-Venta">
-                    <h3>Workstation Pro-Venta</h3>
-                    <p style="color: var(--dark); font-size: 1.3rem; font-weight: bold; margin: 10px 0;">$18,900.00</p>
-                    <button class="btn-premium" onclick="alert('Ficha Técnica: Procesador 8 núcleos, 16GB RAM, 512GB SSD NVMe. Especializada para desarrollo de software.')">VER FICHA TÉCNICA</button>
-                </article>
-            </div>
+        <section class="bloque-redes">
+            <h4>NUESTRAS REDES</h4>
+            <span class="iconos-redes">🌐 ✉️ 📷 🖥️</span>
+            <p style="margin: 0; color: #64748b; font-size: 0.9rem; font-weight: bold;">Sigue nuestras novedades constantes</p>
         </section>
+
+        <p style="text-align: center; margin: 20px 0;">
+            📄 <a href="blog.html" style="color: #0056b3; font-weight: bold; text-decoration: none;">Visita nuestro Blog de Tecnología</a>
+        </p>
+
     </main>
 
-    <!-- Misión / Visión Corporativa -->
-    <section style="background: #f0f7ff; padding: 50px 20px; text-align: center;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="color: var(--primary); font-size: 2rem; margin-bottom: 20px;">IDENTIDAD CORPORATIVA</h2>
-            <p style="font-size: 1.1rem; color: #4a5568; margin-bottom: 20px;"><strong>Misión:</strong> <cite>Proporcionar soluciones tecnológicas integrales a través de la venta de equipos de cómputo de alta calidad, impulsando el desarrollo educativo y profesional de nuestros clientes.</cite></p>
-            <p style="font-size: 1.1rem; color: #4a5568;"><strong>Visión:</strong> <em>Consolidarnos como la plataforma de comercio electrónico líder en el sector tecnológico, reconocida por nuestra excelencia en servicio y vanguardia en productos.</em></p>
-        </div>
-    </section>
-
-    <!-- Pie de Página Institucional Integrado -->
     <footer class="main-footer">
-        <div class="footer-grid">
-            <div>
-                <h4 style="color: #3498db; margin-top: 0;">ATENCIÓN AL CLIENTE</h4>
-                <p><a href="preguntas-frecuentes.html" style="color: #cbd5e1; text-decoration: none;">Preguntas Frecuentes (FAQ)</a></p>
-                <p><a href="politicas.html" style="color: #cbd5e1; text-decoration: none;">Garantías y Privacidad</a></p>
-                <p>Contacto: <a href="mailto:ventas@techventa.com.mx" style="color: #3498db; text-decoration: none;">ventas@techventa.com.mx</a></p>
-            </div>
-            <div style="text-align: center;">
-                <a href="mapa_sitio.html" style="color: white; border: 1px solid #3498db; padding: 10px 25px; text-decoration: none; border-radius: 20px; font-weight: bold; display: inline-block; margin-bottom: 15px;">MAPA DEL SITIO</a>
-                <p style="font-size: 0.85rem; margin: 0;"><br>Proyecto Académico CONALEP</p>
-                <p style="font-size: 0.75rem; color: #94a3b8; margin: 5px 0 0 0;">Módulo: DEWE-20 | Mayo 2026</p>
-            </div>
-            <div style="text-align: right;">
-                <h4 style="color: #3498db; margin-top: 0;">NUESTRAS REDES</h4>
-                <span style="font-size: 1.8rem; letter-spacing: 10px;">🌐 ✉️ 📷 🖥️</span>
-                <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 15px;">Sigue nuestras novedades constantes.</p>
-            </div>
-        </div>
+        <p style="margin: 0 0 5px 0; font-weight: bold;">TechVenta S.A. de C.V. &copy; 2026 | Desarrollado por Mauro Vasquez Mora | Grupo: 6205</p>
+        <p style="margin: 0; color: #94a3b8; font-size: 0.8rem;">Proyecto Académico CONALEP | Módulo: DEWE-20 | Mayo 2026 | Docente: Rogelio Sánchez López</p>
     </footer>
 
-    <!-- RÚBRICA 2.1.1: Inclusión del archivo Script externo utilizando las etiquetas y atributos normados (type y src) -->
     <script type="text/javascript" src="interactivo.js"></script>
 </body>
 </html>
