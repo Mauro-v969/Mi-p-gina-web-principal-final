@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete al Equipo | TechVenta</title>
+    <!-- Vinculación del CSS Maestro Externo -->
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #f8f9fa;">
+
+    <!-- RÚBRICA 2.1.1: Elemento obligatorio <noscript> para entornos sin script -->
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; font-family: sans-serif; position: relative; z-index: 9999;">
+            ⚠️ ERROR DE ENTORNO: JavaScript está desactivado. El sistema de filtros dinámicos y postulaciones instantáneas no se ejecutará correctamente.
+        </div>
+    </noscript>
+
+    <!-- Header Corporativo -->
+    <header class="top-header" style="background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #0056b3; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <div class="logo-box" style="background-color: #0056b3; color: white; font-size: 1.5rem; padding: 5px 12px; border-radius: 6px; margin-right: 10px; font-weight: bold;">T</div>
+            <div class="logo-text">
+                <span class="brand" style="font-weight: bold; color: #0056b3; font-size: 1.4rem;">TechVenta</span><br>
+                <small style="color: #64748b; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">RECURSOS HUMANOS</small>
+            </div>
+        </div>
+        <a href="index.html" style="background: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem;">← VOLVER AL INICIO</a>
+    </header>
+
+    <main style="max-width: 900px; margin: 60px auto; padding: 0 20px;">
+        <section style="text-align: center; margin-bottom: 40px;">
+            <h1 style="color: #1e293b; font-size: 2.8rem; margin-bottom: 15px;">¡Trabaja con Nosotros!</h1>
+            <p style="color: #64748b; font-size: 1.2rem;">Buscamos mentes creativas y apasionadas por la tecnología para transformar el futuro digital de México.</p>
+        </section>
+
+        <!-- Control de Filtros Dinámicos -->
+        <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 30px;">
+            <button class="filter-btn active" onclick="filtrarVacantes('TODOS', this)">Ver Todas</button>
+            <button class="filter-btn" onclick="filtrarVacantes('COMPLETO', this)">Tiempo Completo</button>
+            <button class="filter-btn" onclick="filtrarVacantes('MEDIO', this)">Medio Tiempo</button>
+        </div>
+
+        <!-- Contenedor de Vacantes -->
+        <section class="vacantes-container" id="contenedor-vacantes">
+            
+            <!-- Vacante 1 -->
+            <article class="job-card" data-tipo="COMPLETO">
+                <div class="job-info">
+                    <h3>Técnico de Soporte</h3>
+                    <p>Especialista en ensamble, diagnóstico de hardware y mantenimiento preventivo.</p>
+                </div>
+                <div class="job-right">
+                    <span class="job-tag tag-completo">Tiempo Completo</span>
+                    <button class="btn-apply" onclick="postularse('Técnico de Soporte')">Postularse</button>
+                </div>
+            </article>
+
+            <!-- Vacante 2 -->
+            <article class="job-card" data-tipo="MEDIO">
+                <div class="job-info">
+                    <h3>Asesor de Ventas</h3>
+                    <p>Atención personalizada al cliente, conocimiento de specs técnicas y cierre de ventas.</p>
+                </div>
+                <div class="job-right">
+                    <span class="job-tag tag-medio">Medio Tiempo</span>
+                    <button class="btn-apply" onclick="postularse('Asesor de Ventas')">Postularse</button>
+                </div>
+            </article>
+
+            <!-- Vacante 3 -->
+            <article class="job-card" data-tipo="COMPLETO">
+                <div class="job-info">
+                    <h3>Gestor de Inventarios</h3>
+                    <p>Control de stock, recepción de mercancía y logística interna de almacén.</p>
+                </div>
+                <div class="job-right">
+                    <span class="job-tag tag-completo">Tiempo Completo</span>
+                    <button class="btn-apply" onclick="postularse('Gestor de Inventarios')">Postularse</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Contenedor donde JS inyectará el formulario dinámicamente -->
+        <div id="zona-formulario-postulacion"></div>
+
+        <!-- Sección de contacto RRHH -->
+        <section style="margin-top: 50px; background: white; padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+            <div style="font-size: 3rem; margin-bottom: 15px;">📩</div>
+            <h2 style="color: #1e293b; margin-bottom: 15px;">¿Listo para el siguiente paso?</h2>
+            <p style="color: #64748b; margin-bottom: 25px;">Envía tu CV actualizado y portafolio de evidencias a nuestro departamento de reclutamiento:</p>
+            <div style="background: #f8fafc; display: inline-block; padding: 15px 30px; border-radius: 50px; border: 2px dashed #0056b3;">
+                <span style="font-size: 1.3rem; color: #0056b3; font-weight: bold;">rrhh@techventa.com.mx</span>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #94a3b8;">*TechVenta es una empresa que promueve la igualdad de oportunidades.</p>
+        </section>
+    </main>
+
+    <footer class="main-footer" style="background: #1a1a1a; color: #bdc3c7; text-align: center; padding: 20px; margin-top: 80px;">
+        <p>&copy; 2026 TechVenta S.A. de C.V. | <a href="mapa_sitio.html" style="color: #38bdf8; text-decoration: none;">Mapa del Sitio</a></p>
+    </footer>
+
+    <!-- RÚBRICA 2.1.2: Vinculación obligatoria del Script Externo antes del cierre del body -->
+    <script type="text/javascript" src="vacantes_interactivo.js"></script>
+</body>
+</html>

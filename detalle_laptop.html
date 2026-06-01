@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Uni-Student 14" | TechVenta</title>
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #ffffff;">
+
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; font-family: sans-serif; position: relative; z-index: 9999;">
+             ERROR DE ENTORNO: Las funciones multimedia interactivas y las alertas de inventario dinámico requieren que JavaScript esté habilitado en su navegador.
+        </div>
+    </noscript>
+
+    <header class="top-header" style="background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #0056b3; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <div class="logo-box" style="background-color: #0056b3; color: white; font-size: 1.5rem; padding: 5px 12px; border-radius: 6px; margin-right: 10px; font-weight: bold;"></div>
+            <div class="logo-text">
+                <span class="brand" style="font-weight: bold; color: #0056b3; font-size: 1.4rem;">TechVenta</span><br>
+                <small style="color: #64748b; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">FICHA TÉCNICA OFICIAL</small>
+            </div>
+        </div>
+        <nav>
+            <a href="laptops.html" style="background: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem;">VOLVER AL CATÁLOGO</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; align-items: start;">
+            
+            <section id="multimedia-producto">
+                <div style="background: #f8fafc; padding: 20px; border-radius: 15px; text-align: center; margin-bottom: 20px;">
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500" alt="Laptop Uni-Student" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                </div>
+                
+                <h3 style="color: #1e293b; margin-bottom: 15px; font-weight: bold;">Video de Rendimiento</h3>
+                <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); background: #000;">
+                    <video id="video-specs" width="100%" controls poster="https://via.placeholder.com/400x250?text=Cargando+Video+TechVenta...">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de video.
+                    </video>
+                </div>
+                <div style="margin-top: 10px; display: flex; gap: 10px;">
+                    <button class="btn-video-control" onclick="reproducirVideo()">Play </button>
+                    <button class="btn-video-control" onclick="pausarVideo()">Pausa </button>
+                </div>
+            </section>
+
+            <section id="informacion-producto">
+                <h1 style="color: #0056b3; font-size: 2.2rem; margin-bottom: 10px; font-weight: bold;">Laptop Uni-Student 14"</h1>
+                <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 20px;">La compañera ideal para tus proyectos universitarios y tareas del grupo.</p>
+                
+                <div style="background: #f1f5f9; padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+                    <table width="100%" style="border-collapse: collapse; color: #334155;">
+                        <caption style="text-align: left; font-weight: bold; margin-bottom: 10px; color: #1e293b; font-size: 0.95rem;">ESPECIFICACIONES DE HARDWARE</caption>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #cbd5e1;">
+                                <td style="padding: 10px 0;"><strong>Procesador</strong></td>
+                                <td style="padding: 10px 0;">Intel Core i3 <dfn style="font-style: normal; color: #94a3b8;">(Rendimiento Estándar)</dfn></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #cbd5e1;">
+                                <td style="padding: 10px 0;"><strong>Memoria RAM</strong></td>
+                                <td style="padding: 10px 0;"><abbr title="Random Access Memory" style="text-decoration: none; border-bottom: 1px dotted #475569;">RAM</abbr> 8GB DDR4</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 0;"><strong>Almacenamiento</strong></td>
+                                <td style="padding: 10px 0;"><acronym title="Solid State Drive" style="text-decoration: none; border-bottom: 1px dotted #475569;">SSD</acronym> 256GB Ultra Rápido</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-bottom: 30px;">
+                    <button onclick="compartirFicha()" class="btn-details-action" style="background: #475569; color: white;">
+                         COMPARTIR FICHA
+                    </button>
+                    
+                    <button onclick="imprimirProforma()" class="btn-details-action" style="background: white; border: 1px solid #cbd5e1; color: #475569;">
+                         IMPRIMIR PROFORMA
+                    </button>
+                </div>
+
+                <button class="btn-main-cart" onclick="confirmarAdicionCarrito('Laptop Uni-Student 14\"', 8499.00)">
+                    AÑADIR AL CARRITO - $8,499.00
+                </button>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="main-footer" style="background: #1e293b; color: #bdc3c7; text-align: center; padding: 20px; margin-top: 60px; font-size: 0.9rem;">
+        <p>TechVenta 2026 | Precios sujetos a cambios sin previo aviso conforme a regulaciones comerciales.</p>
+    </footer>
+
+    <script type="text/javascript" src="detalle_interactivo.js"></script>
+</body>
+</html>

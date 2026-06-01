@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktops y Workstations | TechVenta</title>
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #f1f5f9;">
+
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; font-family: sans-serif; position: relative; z-index: 9999;">
+             ERROR DE ENTORNO: El sistema de filtros en tiempo real y cotizaciones automáticas requiere que JavaScript esté activado en su navegador.
+        </div>
+    </noscript>
+
+    <header class="top-header" style="background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #0056b3; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <div class="logo-box" style="background-color: #0056b3; color: white; font-size: 1.5rem; padding: 5px 12px; border-radius: 6px; margin-right: 10px;"></div>
+            <div class="logo-text">
+                <span class="brand" style="font-weight: bold; color: #0056b3; font-size: 1.4rem;">TechVenta</span><br>
+                <small style="color: #64748b; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">DIVISIÓN DESKTOP</small>
+            </div>
+        </div>
+        <nav style="display: flex; gap: 10px;">
+            <a href="index.html" class="btn-contact" style="padding: 10px 20px; text-decoration: none; font-weight: bold; color: #333;">INICIO</a>
+            <a href="carrito.html" class="btn-contact" style="background: #27ae60; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold;"> CARRITO</a>
+        </nav>
+    </header>
+
+    <div style="display: flex; max-width: 1200px; margin: 40px auto; gap: 30px; padding: 0 20px; flex-wrap: wrap;">
+        
+        <aside style="flex: 1; min-width: 280px; background-color: white; padding: 25px; border-radius: 15px; height: fit-content; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+            <h2 style="color: #0056b3; font-size: 1.2rem; margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; font-weight: bold;">FILTRAR EQUIPOS</h2>
+            
+            <form id="formulario-filtros-desktop" onsubmit="ejecutarFiltradoFormulario(event)">
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; color: #1e293b;">Rango de Inversión:</label>
+                    <select id="filtro-precio" style="width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none;">
+                        <option value="TODOS">Ver todos los precios</option>
+                        <option value="BAJO">$8,000 - $15,000</option>
+                        <option value="ALTO">Más de $15,000</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; color: #1e293b;">Uso Sugerido:</label>
+                    <label style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: #64748b; margin-bottom: 8px; cursor: pointer;">
+                        <input type="radio" name="rend" value="OFICINA" checked> Oficina / Estudiante
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: #64748b; cursor: pointer;">
+                        <input type="radio" name="rend" value="GAMING"> Gaming / Diseño Pro
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit" style="width: 100%; background: #0056b3; color: white; border: none; padding: 12px; font-weight: bold; border-radius: 8px; cursor: pointer;">ACTUALIZAR VISTA</button>
+            </form>
+            
+            <hr style="border: 0; border-top: 1px solid #f1f5f9; margin: 25px 0;">
+            <a href="blog.html" style="display: block; text-align: center; color: #0056b3; text-decoration: none; font-weight: bold; font-size: 0.9rem;"> Tips de Mantenimiento</a>
+        </aside>
+
+        <main style="flex: 3; min-width: 350px;">
+            <div style="background: #1e293b; color: white; padding: 20px 30px; border-radius: 15px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="margin: 0; font-size: 1.4rem;">Computadoras de Escritorio</h2>
+                <span id="contador-productos" style="font-size: 0.9rem; opacity: 0.8;">Mostrando 2 de 2 modelos</span>
+            </div>
+            
+            <div class="product-grid" id="grid-computadoras">
+                
+                <article class="product-card-item" data-precio="18900" data-uso="GAMING">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500" alt="Workstation Pro" style="width: 100%; border-radius: 8px; height: 180px; object-fit: cover;">
+                    <h3>Workstation Pro-Venta V2</h3>
+                    <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 15px; text-align: center;">Core i7 | 32GB RAM | Quadro T1000</p>
+                    <p class="price-value" style="font-size: 1.4rem; font-weight: bold; color: #0056b3; text-align: center; margin: 10px 0;">$18,900.00</p>
+                    <a href="detalle-pro.html" class="btn-details" style="display: block; text-align: center; text-decoration: none; background: #f1f5f9; color: #1e293b; padding: 10px; font-weight: bold; border-radius: 6px;">VER FICHA TÉCNICA</a>
+                </article>
+
+                <article class="product-card-item" data-precio="12450" data-uso="OFICINA">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500" alt="Slim Desktop" style="width: 100%; border-radius: 8px; height: 180px; object-fit: cover;">
+                    <h3>EcoCompute Slim Tower</h3>
+                    <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 15px; text-align: center;">Ryzen 5 | 16GB RAM | 512GB SSD</p>
+                    <p class="price-value" style="font-size: 1.4rem; font-weight: bold; color: #0056b3; text-align: center; margin: 10px 0;">$12,450.00</p>
+                    <a href="#" class="btn-details" style="display: block; text-align: center; text-decoration: none; background: #f1f5f9; color: #1e293b; padding: 10px; font-weight: bold; border-radius: 6px;">VER FICHA TÉCNICA</a>
+                </article>
+
+                <article style="grid-column: 1 / -1; background: linear-gradient(90deg, #0056b3, #1e293b); color: white; display: flex; align-items: center; gap: 30px; padding: 40px; border-radius: 15px; margin-top: 20px; flex-wrap: wrap;">
+                    <div style="font-size: 3rem;"></div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 style="color: #27ae60; margin: 0; font-size: 1.5rem; font-weight: bold;">¿Buscas algo específico?</h3>
+                        <p style="margin: 10px 0 0 0; opacity: 0.9; line-height: 1.4;">Armamos tu PC personalizada con los componentes que tú elijas. Ideal para Gaming extremo o Renders pesados.</p>
+                    </div>
+                    <a href="contacto.html" style="background: white; color: #0056b3; text-decoration: none; padding: 12px 24px; font-weight: bold; border-radius: 8px;">COTIZAR AHORA</a>
+                </article>
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer" style="background: #1e293b; color: white; text-align: center; padding: 20px; margin-top: 60px;">
+        <p>TechVenta | Soluciones Desktop Profesionales 2026</p>
+    </footer>
+
+    <script type="text/javascript" src="desktops_interactivo.js"></script>
+</body>
+</html>

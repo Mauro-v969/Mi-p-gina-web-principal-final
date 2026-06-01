@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Directo | TechVenta S.A. de C.V.</title>
+    <!-- RÚBRICA 2.1.1: Vinculación externa de la hoja de estilos maestro -->
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #f4f7f6; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- RÚBRICA 2.1.1: Elemento obligatorio <noscript> para entornos sin script -->
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; position: relative; z-index: 9999;">
+            ⚠️ ERROR DE ENTORNO: Este formulario requiere JavaScript activado para validar de forma segura sus datos antes del envío.
+        </div>
+    </noscript>
+
+    <!-- Header reutilizado para consistencia de marca -->
+    <header class="top-header" style="background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #0056b3; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <div class="logo-box" style="background-color: #0056b3; color: white; font-size: 1.3rem; padding: 5px 12px; border-radius: 6px; margin-right: 10px; font-weight: bold;">T</div>
+            <div class="logo-text">
+                <span class="brand" style="font-weight: bold; color: #0056b3; font-size: 1.4rem;">TechVenta</span><br>
+                <small style="color: #64748b; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">ATENCIÓN AL CLIENTE</small>
+            </div>
+        </div>
+        <a href="index.html" class="btn-contact" style="padding: 10px 20px; text-decoration: none; font-weight: bold; color: #0056b3; border: 2px solid #0056b3; border-radius: 6px;">VOLVER AL INICIO</a>
+    </header>
+
+    <main style="max-width: 800px; margin: 50px auto; padding: 0 20px;">
+        <section style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+            
+            <header style="text-align: center; margin-bottom: 30px;">
+                <h1 style="color: #1e293b; margin-bottom: 10px; font-size: 2.4rem;">Atención Personalizada</h1>
+                <p style="color: #64748b; font-style: italic; margin-top: 0;">"Convertimos tus necesidades tecnológicas en soluciones reales."</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+            </header>
+
+            <!-- Contenedor dinámico para alertas globales de éxito o error -->
+            <div id="alerta-global" style="display: none; padding: 15px; border-radius: 6px; margin-bottom: 20px; font-weight: bold; text-align: center;"></div>
+
+            <!-- Formulario con ID para control del DOM -->
+            <form id="formulario-contacto" action="procesar_contacto.php" method="POST" class="contact-form">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez">
+                        <span class="error-feedback" id="error-nombre"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="text" id="email" name="email" placeholder="usuario@correo.com">
+                        <span class="error-feedback" id="error-email"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="interes">Interés Principal</label>
+                        <select id="interes" name="interes">
+                            <option value="cotizacion">Cotización de Equipos</option>
+                            <option value="soporte">Soporte Técnico</option>
+                            <option value="estudiante">Plan Estudiante (Descuento)</option>
+                            <option value="queja">Sugerencias</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de Cliente</label>
+                        <div class="radio-container" style="display: flex; gap: 15px; margin-top: 10px;">
+                            <label style="cursor: pointer;"><input type="radio" name="tipo" value="persona" checked> Estudiante</label>
+                            <label style="cursor: pointer;"><input type="radio" name="tipo" value="empresa"> Empresa</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="mensaje">Mensaje o Requerimiento</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Detalla el equipo que buscas o el problema técnico..."></textarea>
+                    <span class="error-feedback" id="error-mensaje"></span>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button type="submit" class="btn-submit">ENVIAR SOLICITUD</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer" style="background: #1e293b; color: white; text-align: center; padding: 25px; margin-top: 60px; font-size: 0.9rem;">
+        <p>&copy; 2026 TechVenta S.A. de C.V. | <a href="mapa_sitio.html" style="color: #38bdf8; text-decoration: none;">Mapa del Sitio</a></p>
+    </footer>
+
+    <!-- RÚBRICA 2.1.2: Vinculación obligatoria del Script de Control Externo -->
+    <script type="text/javascript" src="contacto_validar.js"></script>
+</body>
+</html>

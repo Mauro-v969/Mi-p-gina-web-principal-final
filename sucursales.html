@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales y Ubicación | TechVenta</title>
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #ffffff; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; position: relative; z-index: 9999;">
+            ⚠️ ERROR DE ENTORNO: El sistema de asistencia de rutas y geolocalización de tiendas requiere activar JavaScript.
+        </div>
+    </noscript>
+
+    <table width="100%" cellpadding="20" border="0" style="background-color: #2c3e50;">
+        <tr>
+            <td>
+                <span style="color: white; font-size: 1.5rem; font-weight: bold;"><strong style="color: #38bdf8;">Tech</strong>Venta | Nuestras Tiendas</span>
+            </td>
+            <td align="right">
+                <a href="index.html" style="color:white; text-decoration:none; border:1px solid white; padding:10px 20px; font-weight: bold; border-radius: 4px; font-size: 0.9rem;">
+                    VOLVER AL INICIO
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <table width="80%" align="center" cellpadding="30" border="0" style="margin-top: 20px; margin-bottom: 20px;">
+        <tr>
+            <td align="center">
+                <h2 style="color: #2c3e50; font-size: 24px; margin-bottom: 5px;">CDMX - Centro Tecnológico</h2>
+                <p style="font-size: 18px; color: #555; margin-top: 0;">Av. Paseo de la Reforma No. 500, Juárez, Ciudad de México.</p>
+                
+                <div style="margin: 20px 0;">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500" width="400" alt="Tienda TechVenta Ciudad de México" style="border-radius:10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%; height: auto;">
+                </div>
+                
+                <h3 style="margin-top: 20px; font-weight: bold; color: #2c3e50; font-size: 1.1rem; margin-bottom: 10px;">Horario de Atención Presencial:</h3>
+                <p style="margin: 5px 0; color: #475569;">Lunes a Sábado: 9:00 AM - 8:00 PM</p>
+                <p style="margin: 5px 0; color: #475569;">Domingos: 10:00 AM - 4:00 PM</p>
+                
+                <div style="margin-top: 30px; background-color: #f0f7ff; padding: 20px; border-radius: 8px; border: 1px solid #bae6fd; max-width: 500px;">
+                    <h4 style="margin: 0 0 10px 0; color: #0369a1;">📍 Asistente de Ruta en Vivo</h4>
+                    <p style="margin: 0 0 15px 0; font-size: 0.85rem; color: #0c4a6e;">Permite trazar la ruta exacta desde tu ubicación actual en tiempo real utilizando el GPS de tu dispositivo.</p>
+                    
+                    <button onclick="obtenerRutaSucursal()" style="background: #0056b3; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 0.85rem;">
+                        Trazar Ruta a esta Tienda
+                    </button>
+                    
+                    <div id="estado-gps" style="margin-top: 12px; font-size: 0.85rem; font-weight: bold; color: #334155;"></div>
+                </div>
+
+                <br>
+                <hr style="width: 50%; border: 0; border-top: 1px solid #eeeeee;">
+                <p style="color: #64748b; margin-top: 15px;"><small>Para soporte técnico especializado en sucursal, favor de agendar cita previa en el módulo de contacto.</small></p>
+            </td>
+        </tr>
+    </table>
+
+    <footer class="main-footer" style="background: #1e293b; color: white; text-align: center; padding: 20px; font-size: 0.9rem;">
+        <p>TechVenta S.A. de C.V. - Red de Distribuidores Oficiales 2026</p>
+    </footer>
+
+    <script type="text/javascript" src="sucursales_interactivo.js"></script>
+</body>
+</html>

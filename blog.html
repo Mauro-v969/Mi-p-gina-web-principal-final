@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Carrito | TechVenta</title>
+    <!-- Vinculación al CSS maestro para mantener la identidad -->
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #f8fafc;">
+
+    <!-- ======================================================================= -->
+    <!-- ELEMENTO OBLIGATORIO: <noscript> PARA CONTROL DE ENTORNO SCRIPT       -->
+    <!-- ======================================================================= -->
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; font-family: sans-serif; position: relative; z-index: 9999;">
+             ERROR DE ENTORNO: El navegador no puede ejecutar Script o la interactividad está bloqueada. Los cálculos automáticos de IVA y Cupones no estarán disponibles.
+        </div>
+    </noscript>
+
+    <!-- Header Especial de Compra Segura -->
+    <header class="top-header" style="background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #27ae60; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <div class="logo-box" style="background-color: #27ae60; color: white; font-size: 1.5rem; padding: 5px 12px; border-radius: 6px; margin-right: 10px;"></div>
+            <div class="logo-text">
+                <span class="brand" style="font-weight: bold; color: #0056b3; font-size: 1.4rem;">TechVenta</span><br>
+                <small style="color: #64748b; font-size: 0.75rem;">COMPRA SEGURA SSL</small>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html" style="background: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem;">VOLVER AL INICIO</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 1100px; margin: 40px auto; padding: 0 20px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+            
+            <!-- Columna Izquierda: Lista de Productos -->
+            <section id="lista-productos-carrito" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                <h2 style="color: #1e293b; margin-bottom: 25px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px;">Productos en tu Carrito</h2>
+                
+                <!-- Producto 1 -->
+                <div style="display: flex; align-items: center; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #f1f5f9; flex-wrap: wrap;">
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=120" alt="Laptop" style="border-radius: 10px; max-width: 120px;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <h4 style="margin: 0; color: #1e293b; font-size: 1.2rem;">Laptop Uni-Student 14"</h4>
+                        <p style="margin: 5px 0; color: #64748b; font-size: 0.85rem;">Mochila de regalo incluida</p>
+                        <small style="color: #27ae60; font-weight: bold;">En stock - Envío inmediato</small>
+                    </div>
+                    <div style="text-align: right; min-width: 100px;">
+                        <span style="display: block; font-weight: bold; font-size: 1.3rem; color: #0056b3; margin-bottom: 10px;">$8,499.00</span>
+                        <!-- Vinculación a función de JavaScript -->
+                        <button onclick="eliminarProducto()" style="background: none; border: none; color: #ef4444; font-size: 0.85rem; cursor: pointer; text-decoration: underline; font-weight: bold;">Eliminar artículo</button>
+                    </div>
+                </div>
+
+                <!-- Bloque de Cupones -->
+                <div style="margin-top: 25px; background: #f8fafc; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap;">
+                    <div>
+                        <strong style="font-size: 0.9rem; color: #1e293b;">¿Tienes un cupón de descuento institucional?</strong>
+                        <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: #64748b;">Prueba ingresando "CONALEP2026"</p>
+                    </div>
+                    <!-- Vinculación a función de JavaScript -->
+                    <button onclick="aplicarCuponDescuento()" style="background: #0056b3; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Ingresar Código</button>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <a href="laptops.html" style="color: #0056b3; text-decoration: none; font-weight: bold;"> Continuar Comprando</a>
+                </div>
+            </section>
+
+            <!-- Columna Derecha: Resumen de Orden -->
+            <aside>
+                <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                    <h3 style="margin-top: 0; color: #1e293b; border-bottom: 2px solid #edf2f7; padding-bottom: 10px;">Resumen de Orden</h3>
+                    
+                    <div style="display: flex; justify-content: space-between; margin: 15px 0; color: #64748b;">
+                        <span>Subtotal (Sin IVA):</span>
+                        <span id="txt-subtotal" style="font-weight: 600; color: #1e293b;">$7,326.72</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin: 15px 0; color: #64748b;">
+                        <span>IVA (16%):</span>
+                        <span id="txt-iva" style="font-weight: 600; color: #1e293b;">$1,172.28</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin: 15px 0; color: #64748b;">
+                        <span>Gastos de Envío:</span>
+                        <span style="color: #27ae60; font-weight: bold;">Gratis</span>
+                    </div>
+                    
+                    <hr style="border: 0; border-top: 1px solid #f1f5f9; margin: 20px 0;">
+                    
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 25px;">
+                        <span style="font-size: 1.2rem; font-weight: bold; color: #1e293b;">Total Neto:</span>
+                        <span id="txt-total" style="font-size: 1.6rem; font-weight: bold; color: #27ae60;">$8,499.00</span>
+                    </div>
+
+                    <!-- Vinculación a función de JavaScript -->
+                    <button class="btn-premium" onclick="procesarPagoFinal()" style="width: 100%; background-color: #27ae60; border: none; color: white; height: 55px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer;">
+                         PROCEDER AL PAGO
+                    </button>
+                </div>
+
+                <div style="text-align: center; padding: 10px;">
+                    <p style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 15px;">Aceptamos SPEI, Tarjetas de Crédito y Débito</p>
+                    <div style="font-size: 1.5rem; opacity: 0.6; letter-spacing: 10px;">
+                          
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="main-footer" style="background: #1a1a1a; color: #bdc3c7; text-align: center; padding: 20px; margin-top: 60px;">
+        <p>TechVenta S.A. de C.V. &copy; 2026 | Pago seguro procesado por TechPay Systems</p>
+    </footer>
+
+    <!-- ======================================================================= -->
+    <!-- INCLUSIÓN OBLIGATORIA DEL SCRIPT EXTERNO REGULADO POR LA RÚBRICA      -->
+    <!-- ======================================================================= -->
+    <script type="text/javascript" src="carrito_interactivo.js"></script>
+</body>
+</html>

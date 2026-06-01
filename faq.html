@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | TechVenta</title>
+    <!-- RÚBRICA 2.1.1: Vinculación externa de la hoja de estilos maestro -->
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #f4f7f6; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- RÚBRICA 2.1.1: Elemento obligatorio <noscript> para entornos sin script -->
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; position: relative; z-index: 9999;">
+             ERROR DE ENTORNO: El sistema interactivo de acordeón de preguntas requiere que JavaScript esté activado en su navegador.
+        </div>
+    </noscript>
+
+    <!-- Encabezado del Centro de Ayuda -->
+    <header class="top-header" style="background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #0056b3; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <div class="logo-box" style="background-color: #0056b3; color: white; font-size: 1.3rem; padding: 5px 12px; border-radius: 6px; margin-right: 10px; font-weight: bold;">T</div>
+            <div class="logo-text">
+                <span class="brand" style="font-weight: bold; color: #0056b3; font-size: 1.4rem;">TechVenta</span><br>
+                <small style="color: #64748b; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">Centro de Ayuda</small>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html" class="btn-contact" style="background: #1e293b; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; font-size: 0.9rem;">VOLVER AL INICIO</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+        
+        <section style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+            <header style="text-align: center; margin-bottom: 30px;">
+                <h2 style="color: #0056b3; font-size: 2rem; border-bottom: 3px solid #0056b3; display: inline-block; padding-bottom: 10px; font-weight: bold; margin: 0;">Preguntas Frecuentes</h2>
+            </header>
+
+            <!-- Contenedor del Acordeón Interactivo con JS -->
+            <div class="faq-wrapper">
+                
+                <!-- Pregunta 1 -->
+                <article class="faq-item-pro">
+                    <!-- Evento click pasando 'this' para identificar el contenedor activo -->
+                    <div class="faq-header-pro" onclick="conmutarRespuestaFaq(this)">
+                        <span class="faq-status"></span>
+                        <h3>¿Tienen envíos a domicilio?</h3>
+                        <span class="faq-flecha"></span>
+                    </div>
+                    <div class="faq-content-pro">
+                        <p>Sí, realizamos envíos seguros a toda la <strong>República Mexicana</strong> con un tiempo estimado de entrega de <strong>48 horas hábiles</strong> a través de paqueterías certificadas.</p>
+                    </div>
+                </article>
+
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+
+                <!-- Pregunta 2 -->
+                <article class="faq-item-pro">
+                    <div class="faq-header-pro" onclick="conmutarRespuestaFaq(this)">
+                        <span class="faq-status"></span>
+                        <h3>¿Facturan las compras?</h3>
+                        <span class="faq-flecha"></span>
+                    </div>
+                    <div class="faq-content-pro">
+                        <p>Sí, todos nuestros precios publicados ya incluyen el <strong>IVA</strong> legal correspondiente. Al finalizar tu compra, recibirás un enlace automático para generar tu archivo XML y PDF de forma inmediata.</p>
+                    </div>
+                </article>
+
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+
+                <!-- Pregunta 3 -->
+                <article class="faq-item-pro">
+                    <div class="faq-header-pro" onclick="conmutarRespuestaFaq(this)">
+                        <span class="faq-status"></span>
+                        <h3>¿Los equipos cuentan con garantía?</h3>
+                        <span class="faq-flecha"></span>
+                    </div>
+                    <div class="faq-content-pro">
+                        <p>Todos nuestros equipos de hardware cuentan con <strong>1 año de garantía extendida</strong> contra defectos de fábrica, válida directamente en nuestros talleres de servicio o centros autorizados.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Botón de Soporte Directo -->
+            <div style="margin-top: 40px; text-align: center; background: #f9f9f9; padding: 25px; border-radius: 8px;">
+                <p style="margin-bottom: 15px; color: #64748b; font-size: 0.95rem;">¿No encontraste la respuesta que buscabas?</p>
+                <a href="contacto.html" style="background: #27ae60; color: white; text-decoration: none; font-weight: bold; padding: 12px 25px; border-radius: 6px; display: inline-block; font-size: 0.9rem;">CONTACTAR A UN ASESOR</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer" style="background: #1e293b; color: white; text-align: center; padding: 20px; margin-top: 60px; font-size: 0.9rem;">
+        <p>TechVenta S.A. de C.V. - Soporte al Cliente 2026</p>
+    </footer>
+
+    <!-- RÚBRICA 2.1.2: Vinculación obligatoria del Script de Control Externo -->
+    <script type="text/javascript" src="faq_interactivo.js"></script>
+</body>
+</html>

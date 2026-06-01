@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Profesionales | TechVenta</title>
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #f8fafc; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; position: relative; z-index: 9999;">
+            ⚠️ ERROR DE ENTORNO: Los efectos interactivos de cotización y tarjetas dinámicas requieren la activación de JavaScript.
+        </div>
+    </noscript>
+
+    <header class="top-header" style="background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #0056b3; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <div class="logo-box" style="background-color: #0056b3; color: white; font-size: 1.3rem; padding: 5px 12px; border-radius: 6px; margin-right: 10px; font-weight: bold;">🛠️</div>
+            <div class="logo-text">
+                <span class="brand" style="font-weight: bold; color: #0056b3; font-size: 1.4rem;">TechVenta</span><br>
+                <small style="color: #64748b; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">DIVISIÓN TÉCNICA</small>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html" class="btn-contact" style="background: #1e293b; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; font-size: 0.9rem;">← VOLVER AL INICIO</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 1100px; margin: 50px auto; padding: 0 20px;">
+        
+        <section style="text-align: center; margin-bottom: 50px;">
+            <h1 style="color: #1e293b; font-size: 2.8rem; margin-bottom: 15px; font-weight: bold;">Soluciones Técnicas Especializadas</h1>
+            <p style="color: #64748b; font-size: 1.2rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+                Contamos con ingenieros certificados para garantizar que tu inversión tecnológica siempre funcione al 100%.
+            </p>
+        </section>
+
+        <section style="position: relative; margin-bottom: 50px; border-radius: 20px; overflow: hidden; height: 350px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?w=1200" alt="Soporte Técnico" style="width:100%; height:100%; object-fit:cover;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.85)); padding: 40px; color: white;">
+                <h2 style="font-size: 2rem; margin: 0 0 10px 0;">Soporte Nivel Experto</h2>
+                <p style="margin: 0 0 15px 0; color: #cbd5e1;">Diagnóstico preciso y reparaciones con piezas originales garantizadas.</p>
+                <button onclick="calcularPresupuestoExpress()" style="background: #27ae60; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer;">
+                    ⚡ Simular Presupuesto de Mantenimiento
+                </button>
+            </div>
+        </section>
+
+        <section class="services-grid">
+            
+            <article class="service-card-pro" onmouseover="resaltarTarjeta(this)" onmouseout="atenuarTarjeta(this)">
+                <div class="service-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🖥️</div>
+                <h3 style="color: #1e293b; margin: 0 0 10px 0; font-size: 1.25rem;">Ensamble Profesional</h3>
+                <p style="color: #475569; font-size: 0.95rem; line-height: 1.5; margin: 0 0 15px 0;">Armado de PC Gamer y Workstations de alto rendimiento con gestión de cables optimizada.</p>
+                <span class="service-tag-price" style="background: #e0f2fe; color: #0369a1; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">Desde $899 M.N.</span>
+            </article>
+
+            <article class="service-card-pro" onmouseover="resaltarTarjeta(this)" onmouseout="atenuarTarjeta(this)">
+                <div class="service-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧼</div>
+                <h3 style="color: #1e293b; margin: 0 0 10px 0; font-size: 1.25rem;">Mantenimiento Preventivo</h3>
+                <p style="color: #475569; font-size: 0.95rem; line-height: 1.5; margin: 0 0 15px 0;">Limpieza profunda de componentes, soplado de fuentes y cambio de pasta térmica de plata.</p>
+                <span class="service-tag-price" style="background: #e0f2fe; color: #0369a1; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">Desde $450 M.N.</span>
+            </article>
+
+            <article class="service-card-pro" onmouseover="resaltarTarjeta(this)" onmouseout="atenuarTarjeta(this)">
+                <div class="service-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🌐</div>
+                <h3 style="color: #1e293b; margin: 0 0 10px 0; font-size: 1.25rem;">Redes y Conectividad</h3>
+                <p style="color: #475569; font-size: 0.95rem; line-height: 1.5; margin: 0 0 15px 0;">Configuración de WiFi empresarial, cableado estructurado Cat6A y seguridad perimetral.</p>
+                <span class="service-tag-price" style="background: #fef3c7; color: #b45309; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">Cotización Libre</span>
+            </article>
+
+        </section>
+
+        <div id="contenedor-calculo" style="display: none; max-width: 600px; margin: 30px auto 0 auto; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: 12px; text-align: center;">
+            <h4 style="margin: 0 0 8px 0; color: #166534; font-size: 1.1rem;">📊 Estimación de Servicio</h4>
+            <p id="salida-presupuesto" style="margin: 0; font-weight: bold; color: #14532d;"></p>
+        </div>
+
+        <footer style="text-align: center; margin-top: 60px; padding: 30px; border-top: 1px solid #e2e8f0;">
+            <p style="color: #64748b; margin-bottom: 10px;">¿Buscas algo más específico para tus equipos?</p>
+            <a href="mapa_sitio.html" style="color: #0056b3; font-weight: bold; text-decoration: none; border-bottom: 2px solid #0056b3; padding-bottom: 2px;">
+                Explorar todas las categorías en el Mapa del Sitio
+            </a>
+        </footer>
+
+    </main>
+
+    <footer class="main-footer" style="background: #1e293b; color: white; text-align: center; padding: 20px; font-size: 0.9rem;">
+        <p>&copy; 2026 TechVenta S.A. de C.V. | Excelencia en Soporte de IT</p>
+    </footer>
+
+    <script type="text/javascript" src="servicios_interactivo.js"></script>
+</body>
+</html>

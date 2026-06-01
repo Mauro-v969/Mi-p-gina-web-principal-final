@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Legal y Garantías | TechVenta</title>
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #ecf0f1; font-family: Arial, sans-serif; margin:0; padding:0;">
+
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; position: relative; z-index: 9999;">
+            ⚠️ ERROR DE ENTORNO: El validador dinámico de vigencia de garantías y el módulo de impresión requieren que JavaScript esté habilitado.
+        </div>
+    </noscript>
+
+    <table width="100%" cellpadding="15" border="0" style="background-color: #2c3e50;">
+        <tr>
+            <td>
+                <span style="color: white; font-size: 1.2rem;"><strong style="color: #27ae60;">Tech</strong>Venta | Centro Legal</span>
+            </td>
+            <td align="right">
+                <a href="index.html" style="color:white; text-decoration:none; border:1px solid white; padding:10px; font-weight: bold; border-radius: 4px; font-size: 0.85rem;">
+                    VOLVER AL INICIO
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <table width="80%" align="center" cellpadding="40" style="background-color: white; margin-top:30px; margin-bottom:30px; border:1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <tr>
+            <td>
+                <h2 align="center" style="color: #2c3e50; margin-top: 0;">Políticas de Garantía y Cobertura</h2>
+                <hr style="border: 0; border-top: 1px solid #eeeeee; margin-bottom: 20px;">
+                
+                <div style="line-height: 1.8; color: #444; font-size: 0.95rem;">
+                    <p><strong>1. Periodo de Cobertura:</strong> Todos los productos de hardware (Laptops, Desktops y Componentes) adquiridos en TechVenta cuentan con 12 meses de garantía contra defectos de fabricación directos.</p>
+                    
+                    <p><strong>2. Restricciones de Póliza:</strong> La garantía quedará completamente invalidada si el equipo presenta daños por descargas eléctricas, humedad, modificaciones físicas no autorizadas por el fabricante o ruptura de los sellos de seguridad traseros.</p>
+                    
+                    <p><strong>3. Proceso de Reclamación:</strong> Para hacer válida esta póliza, el cliente final deberá presentar su nota de compra digitalizada y el número de serie legible del equipo.</p>
+                </div>
+
+                <div style="margin-top: 35px; background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #0056b3;">
+                    <h4 style="margin: 0 0 10px 0; color: #1e293b;">📅 Validador de Cobertura de Compra</h4>
+                    <p style="margin: 0 0 15px 0; font-size: 0.85rem; color: #64748b;">Calcula de forma automática la fecha límite de tu póliza de 12 meses ingresando el día de tu adquisición.</p>
+                    
+                    <button onclick="calcularVencimientoGarantia()" style="background: #0056b3; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer;">
+                        Calcular Fecha Límite
+                    </button>
+                    
+                    <div id="resultado-fecha" style="margin-top: 15px; font-weight: bold; color: #2c3e50; font-size: 0.9rem;"></div>
+                </div>
+
+                <div style="margin-top: 30px; text-align: right;">
+                    <button onclick="imprimirPolizaLegal()" style="background: #27ae60; color: white; border: none; padding: 12px 24px; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
+                        🖨️ IMPRIMIR COMPROBANTE LEGAL
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <footer style="background-color: #2c3e50; color: #bdc3c7; text-align: center; padding: 20px; font-size: 0.85rem;">
+        <p>TechVenta S.A. de C.V. &copy; <span id="año-actual">2026</span> | Departamento Jurídico y de Cumplimiento Comercial</p>
+    </footer>
+
+    <script type="text/javascript" src="legal_interactivo.js"></script>
+</body>
+</html>

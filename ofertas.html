@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Irresistibles | TechVenta</title>
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #fff5f5;">
+
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; font-family: sans-serif; position: relative; z-index: 9999;">
+             ERROR DE ENTORNO: El temporizador de liquidación y los cupones flash requieren la ejecución activa de JavaScript en su navegador.
+        </div>
+    </noscript>
+
+    <header class="top-header" style="background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #e74c3c; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <div class="logo-box" style="background: #e74c3c; color: white; font-size: 1.5rem; padding: 5px 12px; border-radius: 6px; margin-right: 10px; font-weight: bold;">%</div>
+            <div class="logo-text">
+                <span class="brand" style="font-weight: bold; color: #e74c3c; font-size: 1.4rem;">TechVenta</span><br>
+                <small style="color: #64748b; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">ZONA DE DESCUENTOS</small>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html" style="background: white; border: 2px solid #e74c3c; color: #e74c3c; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem;">VOLVER AL INICIO</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        
+        <section style="text-align: center; margin-bottom: 40px;">
+            <h1 style="color: #c0392b; font-size: 2.8rem; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 10px;"> ¡Liquidación Total 2026!</h1>
+            <p style="color: #64748b; font-size: 1.2rem; margin-top: 0;">Precios de locura por tiempo limitado. ¡No dejes que te los ganen!</p>
+            
+            <div id="reloj-liquidacion" style="background: #e74c3c; color: white; display: inline-block; padding: 10px 25px; border-radius: 8px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);">
+                Cargando tiempo de la oferta...
+            </div>
+        </section>
+
+        <section class="product-grid">
+            
+            <article class="product-card promo-card" style="border: 2px dashed #e74c3c; position: relative;">
+                <div class="discount-tag">-35% Dto.</div>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400" alt="Tablet Pro" style="max-width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <h3>Tablet Pro 10"</h3>
+                <p class="product-desc">Pantalla Retina | 128GB | Incluye Stylus de precisión</p>
+                
+                <div class="price-container">
+                    <span class="old-price">$4,500.00</span><br>
+                    <span class="new-price" style="color: #e74c3c;">$2,999.00</span>
+                </div>
+
+                <button class="btn-submit" onclick="agregarConConfirmacion('Tablet Pro 10\"', 2999.00)" style="background: #e74c3c;">
+                     AGREGAR AL CARRITO
+                </button>
+                <p style="margin-top: 15px; font-size: 0.8rem; color: #94a3b8; text-align: center;">*Válido hasta agotar existencias.</p>
+            </article>
+
+            <article class="product-card">
+                <div class="discount-tag" style="background: #27ae60;">NUEVO PRECIO</div>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1583573636246-18cb2246697f?w=400" alt="Smartphone X" style="max-width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <h3>Smartphone Tech X</h3>
+                <p class="product-desc">Cámara 108MP | 5G Listo | Batería de alta duración 2 días</p>
+                <div class="price-container">
+                    <span class="old-price">$12,400.00</span><br>
+                    <span class="new-price" style="color: #27ae60;">$9,899.00</span>
+                </div>
+                <button class="btn-details" onclick="solicitarInformacionFlash('Smartphone Tech X')">VER DETALLES</button>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="main-footer" style="background: #c0392b; color: white; text-align: center; padding: 20px; margin-top: 60px;">
+        <p>Promociones válidas para todo México | TechVenta S.A. de C.V. &copy; 2026</p>
+    </footer>
+
+    <script type="text/javascript" src="ofertas_interactivo.js"></script>
+</body>
+</html>

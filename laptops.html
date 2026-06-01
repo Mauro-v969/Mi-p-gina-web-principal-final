@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Laptops | TechVenta</title>
+    <link rel="stylesheet" href="estilos-home.css">
+</head>
+<body style="background-color: #f8fafc; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <noscript>
+        <div style="background-color: #e74c3c; color: white; padding: 15px; text-align: center; font-weight: bold; position: relative; z-index: 9999;">
+             ERROR DE ENTORNO: Los controles de ordenamiento de precios y el asistente interactivo requieren que JavaScript esté habilitado.
+        </div>
+    </noscript>
+
+    <header class="top-header" style="background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #0056b3; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="logo-container" style="display: flex; align-items: center;">
+            <div class="logo-box" style="background-color: #0056b3; color: white; font-size: 1.3rem; padding: 5px 12px; border-radius: 6px; margin-right: 10px; font-weight: bold;"></div>
+            <div class="logo-text">
+                <span class="brand" style="font-weight: bold; color: #0056b3; font-size: 1.4rem;">TechVenta</span><br>
+                <small style="color: #64748b; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px;">SECCIÓN LAPTOPS</small>
+            </div>
+        </div>
+        <nav style="display: flex; gap: 10px;">
+            <a href="index.html" class="btn-contact" style="padding: 10px 20px; text-decoration: none; font-weight: bold; color: #333;">INICIO</a>
+            <a href="carrito.html" class="btn-contact" style="background: #0056b3; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold;"> MI CARRITO (1)</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        
+        <section style="text-align: center; margin-bottom: 40px;">
+            <h1 style="color: #1e293b; font-size: 2.8rem; margin-bottom: 10px;">Catálogo de Equipos Portátiles</h1>
+            <p style="color: #64748b; font-size: 1.2rem; margin-top: 0;">Encuentra la potencia ideal para tus estudios o proyectos profesionales.</p>
+            
+            <div style="margin-top: 25px; background: white; display: inline-flex; align-items: center; gap: 12px; padding: 10px 20px; border-radius: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <label style="font-weight: bold; color: #475569; font-size: 0.9rem;">Ordenar por Costo:</label>
+                <select id="control-orden" onchange="ordenarProductosPorPrecio()" style="padding: 6px 12px; border: 1px solid #cbd5e1; border-radius: 20px; outline: none; background: #f8fafc; font-weight: 500; color: #334155;">
+                    <option value="DEF">Predeterminado</option>
+                    <option value="MENOR">Menor a Mayor precio</option>
+                    <option value="MAYOR">Mayor a Menor precio</option>
+                </select>
+            </div>
+        </section>
+
+        <div class="product-grid" id="grid-laptops">
+            
+            <article class="product-card-laptop" data-precio="8499">
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400" alt="Laptop Student">
+                <h3>Uni-Student Slim 14"</h3>
+                <p class="specs-text">Intel Core i3 | 8GB RAM | 256GB SSD</p>
+                <p class="price-tag">$8,499.00</p>
+                <a href="detalle-laptop.html" class="btn-details-view">VER FICHA</a>
+            </article>
+
+            <article class="product-card-laptop" data-precio="18200">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400" alt="Gaming Laptop">
+                <h3>TechPro Gaming G5</h3>
+                <p class="specs-text">Ryzen 7 | 16GB RAM | RTX 3060</p>
+                <p class="price-tag">$18,200.00</p>
+                <a href="#" class="btn-details-view">VER FICHA</a>
+            </article>
+
+            <article class="product-card-laptop" data-precio="22500">
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400" alt="EliteBook">
+                <h3>EliteBook Ultra 13"</h3>
+                <p class="specs-text">Intel Core i7 | 16GB RAM | 512GB SSD</p>
+                <p class="price-tag">$22,500.00</p>
+                <a href="#" class="btn-details-view">VER FICHA</a>
+            </article>
+
+            <article class="product-card-laptop" data-precio="4899">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400" alt="Eco Laptop">
+                <h3>Eco-Compute Air</h3>
+                <p class="specs-text">Celeron N4020 | 4GB RAM | 128GB</p>
+                <p class="price-tag">$4,899.00</p>
+                <a href="#" class="btn-details-view">VER FICHA</a>
+            </article>
+
+            <article class="product-card-laptop" data-precio="35900">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400" alt="Workstation">
+                <h3>Precision WorkStation 16"</h3>
+                <p class="specs-text">Core i9 | 32GB RAM | 1TB SSD</p>
+                <p class="price-tag">$35,900.00</p>
+                <a href="#" class="btn-details-view">VER FICHA</a>
+            </article>
+
+            <article id="tarjeta-fija-contacto" style="border: 2px dashed #0056b3; background: #f0f7ff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 25px; border-radius: 12px; box-sizing: border-box;">
+                <div style="font-size: 2.5rem; margin-bottom: 15px;"></div>
+                <h3 style="color: #0056b3; margin: 0 0 10px 0; font-size: 1.25rem; font-weight: bold;">¿No sabes cuál elegir?</h3>
+                <p style="color: #475569; margin: 0 0 20px 0; font-size: 0.9rem; line-height: 1.4;">Contacta a nuestros asesores técnicos para una recomendación personalizada.</p>
+                <a href="contacto.html" style="background: #0056b3; color: white; text-decoration: none; padding: 10px 24px; font-weight: bold; border-radius: 6px; font-size: 0.9rem; display: inline-block;">CHAT EN VIVO</a>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="main-footer" style="background: #1e293b; color: white; text-align: center; padding: 25px; margin-top: 60px; font-size: 0.9rem;">
+        <p>TechVenta S.A. de C.V. - Catálogo Actualizado Mayo 2026</p>
+        <p style="margin-top: 10px; margin-bottom: 0;"><a href="mapa_sitio.html" style="color: #38bdf8; text-decoration: none;">Volver al Mapa del Sitio</a></p>
+    </footer>
+
+    <script type="text/javascript" src="laptops_interactivo.js"></script>
+</body>
+</html>
